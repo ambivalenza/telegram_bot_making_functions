@@ -24,9 +24,7 @@ def equations(update, context):
 
 def decision(update, context):
     update.message.reply_text("a = ")
-
     a = update.message.text
-
     update.message.reply_text("b = ")
     b = update.message.text
     update.message.reply_text("c = ")
