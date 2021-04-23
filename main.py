@@ -30,15 +30,15 @@ def equations(update, context):
 def decision(update, context):
     global a, b, c, action
     if action == 1:
-        a += int(update.message.text)
+        a = int(update.message.text)
         update.message.reply_text("b = ")
         action += 1
     elif action == 2:
-        b += int(update.message.text)
+        b = int(update.message.text)
         update.message.reply_text("c = ")
         action += 1
     elif action == 3:
-        c += int(update.message.text)
+        c = int(update.message.text)
         discr = int(b) ** 2 - 4 * int(a) * int(c)
         update.message.reply_text(f"Дискриминант D = {discr}")
         print(a, b, c)
