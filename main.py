@@ -18,14 +18,22 @@ def main():
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("equations", equations))
+    dp.add_handler(CommandHandler("reference", reference))
     dp.add_handler(MessageHandler(Filters.text, decision))
 
     updater.start_polling()
     updater.idle()
 
 
+def reference(update, context):
+    update.message.reply_text("Добро пожаловать в справку для этого бота")
+    update.message.reply_text("/start - запуск(перезапуск) бота")
+    update.message.reply_text("/equation - решение квадратных уравнений")
+    update.message.reply_text("P.S. Бот не умеет обрабатывать корни и дроби(только десятичные)")
+
+
 def start(update, context):
-    reply_keyboard = [['/equations']]
+    reply_keyboard = [['/reference', '/equations']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
     update.message.reply_text('Как этот бот может вам помочь?', reply_markup=markup)
 
