@@ -1,5 +1,6 @@
-import matplotlib.pyplot as plt
 import decimal
+
+import matplotlib.pyplot as plt
 
 
 # Это замена np.arange

@@ -1,7 +1,6 @@
 import math
 
-from telegram.ext import CommandHandler
-from telegram.ext import Updater, MessageHandler, Filters
+from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
 TOKEN = '1678923601:AAHs2GdKvsjcixPC9S4C1e9y2C78Z23-V80'
 

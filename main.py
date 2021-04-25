@@ -1,8 +1,7 @@
 import math
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from telegram import ReplyKeyboardMarkup
-from telegram import ReplyKeyboardRemove
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
 
 TOKEN = '1678923601:AAHs2GdKvsjcixPC9S4C1e9y2C78Z23-V80'
 
