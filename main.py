@@ -4,7 +4,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import ReplyKeyboardMarkup
 from telegram import ReplyKeyboardRemove
 
-TOKEN = '1736386615:AAF05MwBL5U82e_0n0h9lv1jSfhFnk9qI4Q'
+TOKEN = '1678923601:AAHs2GdKvsjcixPC9S4C1e9y2C78Z23-V80'
 
 a = 0
 b = 0
@@ -171,7 +171,7 @@ def decision(update, context):
 
         reply_keyboard = [['/start']]
         markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
-        update.message.reply_text('...', reply_markup=markup)
+        update.message.reply_text('Конец работы.', reply_markup=markup)
 
 
 # Запускаем функцию main() в случае запуска скрипта.
