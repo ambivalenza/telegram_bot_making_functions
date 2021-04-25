@@ -17,7 +17,7 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("equations", equations))
+    dp.add_handler(CommandHandler("equation", equation))
     dp.add_handler(CommandHandler("reference", reference))
     dp.add_handler(MessageHandler(Filters.text, decision))
 
@@ -33,12 +33,12 @@ def reference(update, context):
 
 
 def start(update, context):
-    reply_keyboard = [['/reference', '/equations']]
+    reply_keyboard = [['/reference', '/equation']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
     update.message.reply_text('Как этот бот может вам помочь?', reply_markup=markup)
 
 
-def equations(update, context):
+def equation(update, context):
     global action
     update.message.reply_text("Введите коэффициенты для уравнения", reply_markup=ReplyKeyboardRemove())
     update.message.reply_text("ax^2 + bx + c = 0:")
