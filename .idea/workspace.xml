@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="499a3f29-a3b3-4291-a6ce-bc8d0e91fe84" name="Default Changelist" comment="debug">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/telegram_bot_making_functions.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/telegram_bot_making_functions.iml" afterDir="false" />
+    <list default="true" id="499a3f29-a3b3-4291-a6ce-bc8d0e91fe84" name="Default Changelist" comment="notes are created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notes.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/notes.sqlite" afterDir="false" />
@@ -551,7 +549,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619452652999</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="notes are created">
+      <created>1619465019916</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1619465019916</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -582,7 +587,8 @@
     <MESSAGE value="ready steady go!" />
     <MESSAGE value="token changed" />
     <MESSAGE value="debug" />
-    <option name="LAST_COMMIT_MESSAGE" value="debug" />
+    <MESSAGE value="notes are created" />
+    <option name="LAST_COMMIT_MESSAGE" value="notes are created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2648" y="334" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1619448215477">
@@ -594,25 +600,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="587" y="88" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1618849432938" />
-    <state width="1899" height="333" key="GridCell.Tab.0.bottom" timestamp="1619464718318">
+    <state width="1899" height="333" key="GridCell.Tab.0.bottom" timestamp="1619466136217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619464718318" />
+    <state width="1899" height="333" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619466136217" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1618849784426" />
-    <state width="1899" height="333" key="GridCell.Tab.0.center" timestamp="1619464718318">
+    <state width="1899" height="333" key="GridCell.Tab.0.center" timestamp="1619466136217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="333" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619464718318" />
+    <state width="1899" height="333" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619466136217" />
     <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1618849784426" />
-    <state width="1899" height="333" key="GridCell.Tab.0.left" timestamp="1619464718318">
+    <state width="1899" height="333" key="GridCell.Tab.0.left" timestamp="1619466136217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="333" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619464718318" />
+    <state width="1899" height="333" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619466136217" />
     <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1618849784426" />
-    <state width="1899" height="333" key="GridCell.Tab.0.right" timestamp="1619464718318">
+    <state width="1899" height="333" key="GridCell.Tab.0.right" timestamp="1619466136217">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="333" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619464718318" />
+    <state width="1899" height="333" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619466136217" />
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1618849784426" />
     <state width="1899" height="347" key="GridCell.Tab.1.bottom" timestamp="1619461580407">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -646,10 +652,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619373753878" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1619452656001">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1619465021425">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619452656001" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1619465021425" />
     <state x="2472" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@1920.0.1920.1080" timestamp="1619451175720" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1618849435666" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1619451840045">

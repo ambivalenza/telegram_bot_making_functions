@@ -94,7 +94,7 @@ def view_notes(update, context):
     cursor = connection.cursor()
     result = cursor.execute(f'SELECT note, date FROM Notes WHERE user_id = {user_id}').fetchall()
     for i in result:
-        text += f'Заметка: {i[0]}, дата создания: {i[1]}'
+        text += f'Заметка: "{i[0]}", дата создания: {i[1]}\n'
     update.message.reply_text(text)
 
 
