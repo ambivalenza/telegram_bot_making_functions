@@ -1,9 +1,10 @@
 import math
 
-from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove
-from telegram.ext import CommandHandler, Filters, MessageHandler, Updater
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from telegram import ReplyKeyboardMarkup
+from telegram import ReplyKeyboardRemove
 
-TOKEN = '1678923601:AAHs2GdKvsjcixPC9S4C1e9y2C78Z23-V80'
+TOKEN = '1736386615:AAF05MwBL5U82e_0n0h9lv1jSfhFnk9qI4Q'
 
 a = 0
 b = 0
@@ -16,7 +17,7 @@ def main():
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("equation", equation))
+    dp.add_handler(CommandHandler("equations", equations))
     dp.add_handler(CommandHandler("reference", reference))
     dp.add_handler(MessageHandler(Filters.text, decision))
 
@@ -32,12 +33,12 @@ def reference(update, context):
 
 
 def start(update, context):
-    reply_keyboard = [['/reference', '/equation']]
+    reply_keyboard = [['/reference', '/equations']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
     update.message.reply_text('Как этот бот может вам помочь?', reply_markup=markup)
 
 
-def equation(update, context):
+def equations(update, context):
     global action
     update.message.reply_text("Введите коэффициенты для уравнения", reply_markup=ReplyKeyboardRemove())
     update.message.reply_text("ax^2 + bx + c = 0:")
@@ -170,7 +171,7 @@ def decision(update, context):
 
         reply_keyboard = [['/start']]
         markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
-        update.message.reply_text('Конец работы.', reply_markup=markup)
+        update.message.reply_text('...', reply_markup=markup)
 
 
 # Запускаем функцию main() в случае запуска скрипта.
