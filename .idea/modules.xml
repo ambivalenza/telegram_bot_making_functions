@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../hw02_community/.idea/hw02_community.iml" filepath="$PROJECT_DIR$/../hw02_community/.idea/hw02_community.iml" />
+      <module fileurl="file://$USER_HOME$/PycharmProjects/retelling/.idea/retelling.iml" filepath="$USER_HOME$/PycharmProjects/retelling/.idea/retelling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/telegram_bot_making_functions.iml" filepath="$PROJECT_DIR$/.idea/telegram_bot_making_functions.iml" />
+    </modules>
+  </component>
+</project>
