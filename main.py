@@ -4,7 +4,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import ReplyKeyboardMarkup
 from telegram import ReplyKeyboardRemove
 
-TOKEN = '1736386615:AAF05MwBL5U82e_0n0h9lv1jSfhFnk9qI4Q'
+TOKEN = '1762681705:AAEq-nT5atDI3IJCzR817Qyr8lIR1zMx4mA'
 
 a = 0
 b = 0
