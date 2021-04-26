@@ -447,7 +447,7 @@ def decision_2(update, context):
 
         reply_keyboard = [['/start']]
         markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
-        update.message.reply_text('Коней работы', reply_markup=markup)
+        update.message.reply_text('Конец работы', reply_markup=markup)
 
 
 # Запускаем функцию main() в случае запуска скрипта.
