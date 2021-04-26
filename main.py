@@ -1,16 +1,24 @@
+import datetime
 import math
+import sqlite3
 
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from telegram import ReplyKeyboardMarkup
 from telegram import ReplyKeyboardRemove
+from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
-TOKEN = '1762681705:AAEq-nT5atDI3IJCzR817Qyr8lIR1zMx4mA'
+TOKEN = '1678923601:AAHs2GdKvsjcixPC9S4C1e9y2C78Z23-V80'
 
 a = 0
 b = 0
 c = 0
 action = 0
 equation = 0
+notes_create = 0
+current_date = datetime.date.today()
+DB_FILE = 'notes.sqlite'
+
+user_id = 0
+
 
 def main():
     global dp, equation
@@ -20,21 +28,25 @@ def main():
     dp.add_handler(CommandHandler("equations", equations))
     dp.add_handler(CommandHandler("reference", reference))
     dp.add_handler(CommandHandler("biquadrate", biquadrate))
+    dp.add_handler(CommandHandler("note", note))
+    dp.add_handler(CommandHandler("view_notes", view_notes))
 
     updater.start_polling()
     updater.idle()
 
 
 def reference(update, context):
-    update.message.reply_text("Добро пожаловать в справку для этого бота")
-    update.message.reply_text("/start - запуск(перезапуск) бота")
-    update.message.reply_text("/equation - решение квадратных уравнений")
-    update.message.reply_text("/biquadrate - решение биквадратных уравнений")
-    update.message.reply_text("P.S. Бот не умеет обрабатывать корни и дроби(только десятичные)")
+    update.message.reply_text("Добро пожаловать в справку для этого бота.")
+    update.message.reply_text("/start - запуск(перезапуск) бота.")
+    update.message.reply_text("/equation - решение квадратных уравнений.")
+    update.message.reply_text("/biquadrate - решение биквадратных уравнений.")
+    update.message.reply_text("/note - создание заметки.")
+    update.message.reply_text("/view_notes - просмотреть заметки.")
+    update.message.reply_text("P.S. Бот не умеет обрабатывать корни и дроби(только десятичные).")
 
 
 def start(update, context):
-    reply_keyboard = [['/reference', '/equations', '/biquadrate']]
+    reply_keyboard = [['/reference', '/equations', '/biquadrate', '/note', '/view_notes']]
     markup = ReplyKeyboardMarkup(reply_keyboard, one_time_keyboard=False)
     update.message.reply_text('Как этот бот может вам помочь?', reply_markup=markup)
 
@@ -46,6 +58,44 @@ def equations(update, context):
     update.message.reply_text("ax^2 + bx + c = 0:")
     update.message.reply_text("a = ")
     dp.add_handler(MessageHandler(Filters.text, decision))
+
+
+def note(update, context):
+    global notes_create
+    update.message.reply_text("Создание заметки.")
+    update.message.reply_text("Введите заметку")
+    notes_create += 1
+    dp.add_handler(MessageHandler(Filters.text, notes_creating))
+
+
+def notes_creating(update, context):
+    global notes_create, user_id, date, note
+    if notes_create == 1:
+        note = update.message.text
+        print(note)
+        date = current_date
+        print(date)
+        update.message.reply_text("Заметка создана")
+        user_id = update.message.from_user.id
+    notes_create = 0
+    db_queries(note, date, user_id)
+
+
+def db_queries(note, date, user_id):
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+    cursor.execute('INSERT INTO notes (note, date, user_id) VALUES (?, ?, ?)', (note, date, user_id))
+    connection.commit()
+
+
+def view_notes(update, context):
+    text = ''
+    connection = sqlite3.connect(DB_FILE)
+    cursor = connection.cursor()
+    result = cursor.execute(f'SELECT note, date FROM Notes WHERE user_id = {user_id}').fetchall()
+    for i in result:
+        text += f'Заметка: {i[0]}, дата создания: {i[1]}'
+    update.message.reply_text(text)
 
 
 def check_a(update):
