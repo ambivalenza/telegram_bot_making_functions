@@ -43,6 +43,7 @@ def reference(update, context):
     update.message.reply_text("/note - создание заметки.")
     update.message.reply_text("/view_notes - просмотреть заметки.")
     update.message.reply_text("P.S. Бот не умеет обрабатывать корни и дроби(только десятичные).")
+    update.message.reply_text("Бот еще на стадии разработки, потому достаточно много багов!")
 
 
 def start(update, context):
