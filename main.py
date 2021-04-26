@@ -431,15 +431,15 @@ def decision_2(update, context):
         if discr > 0:
             x_1 = (-b + math.sqrt(discr)) / (2 * a)
             x_2 = (-b - math.sqrt(discr)) / (2 * a)
-            x1 = -(math.sqrty(x_1))
-            x2 = math.sqrty(x_1)
-            x3 = -(math.sqrty(x_2))
-            x4 = math.sqrty(x_2)
+            x1 = -(math.sqrt(x_1))
+            x2 = math.sqrt(x_1)
+            x3 = -(math.sqrt(x_2))
+            x4 = math.sqrt(x_2)
             update.message.reply_text("x1 = %.2f \nx2 = %.2f \nx3 = %.2f \nx4 = %.2f" % (x1, x2, x3, x4))
         elif discr == 0:
             x = -b / (2 * a)
-            x1 = -(math.sqrty(x))
-            x2 = math.sqrty(x)
+            x1 = -(math.sqrt(x))
+            x2 = math.sqrt(x)
             update.message.reply_text("x1 = %.2f \nx2 = %.2f" % (x1, x2))
         else:
             update.message.reply_text("Корней нет")
